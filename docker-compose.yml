@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  e-grocery-app:
+    image: 260526/gateway:v3
+    ports:
+      - "9094:9093"
+    restart: always
+    environment:
+      CATALOGUE_SERVICE_URL: http://172.31.36.65:8088
+      ORDER_SERVICE_URL: http://172.31.36.65:9090
